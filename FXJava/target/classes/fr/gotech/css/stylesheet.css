@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Roboto Light';
+    src: url('font/Roboto-Light.ttf');
+}
+@font-face {
+    font-family: 'Roboto Medium';
+    src: url('font/Roboto-Medium.ttf');
+}
+.root{
+    -fx-font-family: "Roboto Light";
+    -fx-font-size: 15px;
+}
+
+/* ClientView */
+#titre1{
+    -fx-font-family: "Roboto Medium";
+    -fx-font-color: #379EC1;
+    -fx-font-size: 32px;
+}
+.JFXButton{
+    -fx-button-type : RAISED;
+    -fx-background-color: #379EC1;
+    -fx-button-visual-focus : true;
+    -fx-font-size : 18px;
+    -fx-font-family: "Roboto Medium";
+}
+.gridInterfaces{
+    -fx-font-family: "Roboto Light";
+    -fx-font-size: 20px;
+}
+
+#leftMenu{
+    -fx-background-image: url("images/bckleftmenu.png");
+    -fx-background-size: cover;
+    -fx-background-position: center, center;
+}
+
+#titreDetails{
+    -fx-font-family: "Roboto Light";
+    -fx-font-size: 20px;
+}
+#idRecherche{
+    -fx-font-family: "Roboto Light";
+
+}
+#idLabel{
+    -fx-font-family: "Roboto Light";
+    -fx-font-size: 18px;
+
+}
+#idSeparator{
+
+}
+.labelClient{
+    -fx-font-family: "Roboto Light";
+    -fx-font-size: 18px;
+}
+#tableauClient{
+
+}
+.tree-table-cell {
+
+}
+.slider{
+    -fx-border-style: none;
+}
+.tree-table-view {
+    -fx-border-style: none;
+}
+.split-pane{
+    -fx-border-style: hidden;
+}
+
+/* Let TreeTableView rows look like TableView rows  */
+.tree-table-row-cell {
+    -fx-background-color: -fx-table-cell-border-color, -fx-background;
+    -fx-background-insets: 0, 0 0 1 0;
+}
+/* Let odd rows look different */
+.tree-table-row-cell:odd {
+    -fx-background: -fx-control-inner-background-alt;
+}
+/* Selected when control is focused */
+.tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:selected {
+    -fx-background: -fx-selection-bar;
+    -fx-table-cell-border-color: derive(-fx-selection-bar, 20%);
+}
+/* Selected when control is not focused */
+.tree-table-row-cell:filled:selected {
+    -fx-background: -fx-selection-bar-non-focused;
+    -fx-table-cell-border-color: derive(-fx-selection-bar-non-focused, 20%);
+}
+
+#fontRoboto{
+    -fx-font-family: "Roboto Light";
+}
+.labelEquipement{
+    -fx-font-family: "Roboto Light";
+    -fx-font-size: 18px;
+}
+#titreEquipement{
+    -fx-font-family: "Roboto Light";
+    -fx-font-size: 20px;
+}
+.classTab{
+    -fx-font-family: "Roboto Light";
+}
+.formFont{
+    -fx-font-family: "Roboto Light";
+    -fx-font-size: 18px;
+}

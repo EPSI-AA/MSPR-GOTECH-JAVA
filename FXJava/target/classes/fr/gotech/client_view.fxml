@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.gotech.ClientViewController">
+   <children>
+      <JFXTextField id="idRecherche" fx:id="idInput" focusColor="#379ec1" labelFloat="true" layoutX="14.0" layoutY="169.0" prefHeight="26.0" prefWidth="238.0" promptText="Effectuez une recherche :" unFocusColor="#379ec1">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <SplitPane dividerPositions="0.6607142857142857" layoutX="227.0" layoutY="84.0" prefHeight="400.0" prefWidth="1047.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <JFXTreeTableView id="tableauClient" fx:id="clientTable" layoutY="-16.0" prefHeight="595.0" prefWidth="764.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnResizePolicy>
+                        <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </JFXTreeTableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox prefHeight="398.0" prefWidth="361.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Label id="titreDetails" prefHeight="21.0" prefWidth="293.0" text="Détails du client selectionné :" textAlignment="JUSTIFY">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="5.0" top="15.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Separator id="idSeparator" prefWidth="200.0" />
+                        <GridPane prefHeight="262.0" prefWidth="211.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="165.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.0" minWidth="10.0" prefWidth="230.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label styleClass="labelClient" text="Nom :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label fx:id="nameLabel" styleClass="labelClient" text="Label" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label styleClass="labelClient" text="Adresse :" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label fx:id="adresseLabel" styleClass="labelClient" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label styleClass="labelClient" text="Code Postale :" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label fx:id="cpLabel" styleClass="labelClient" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label styleClass="labelClient" text="Ville :" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label fx:id="villeLabel" styleClass="labelClient" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label styleClass="labelClient" text="Téléphone :" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label fx:id="telLabel" styleClass="labelClient" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label styleClass="labelClient" text="Adresse Mail :" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label fx:id="mailLabel" styleClass="labelClient" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin></Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin>
+                        </GridPane>
+                        <HBox prefHeight="69.0" prefWidth="412.0">
+                           <children>
+                              <JFXButton onAction="#actionEditerClient" prefHeight="50.0" prefWidth="160.0" styleClass="JFXButton" text="Modifier">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton onAction="#actionVoirEquipement" prefHeight="50.0" prefWidth="160.0" styleClass="JFXButton" text="Matériels">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="130.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="69.0" prefWidth="412.0">
+                           <children>
+                              <JFXButton onAction="#actionDeleteClient" prefHeight="50.0" prefWidth="160.0" styleClass="JFXButton" text="Supprimer">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton onAction="#actionRefresh" prefHeight="50.0" prefWidth="160.0" styleClass="JFXButton" text="Recharger">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Label id="idLabel" fx:id="idValue" layoutX="14.0" layoutY="100.0" prefHeight="29.0" prefWidth="451.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <padding>
+            <Insets top="10.0" />
+         </padding></Label>
+      <Label id="titre1" fx:id="idValue1" layoutX="14.0" layoutY="29.0" prefHeight="29.0" prefWidth="1181.0" text="BIENVENUE DANS VOTRE APPLICATION DE GESTION DES STOCKS CLIENTS" textFill="#379ec1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Separator id="mainSeparator" layoutX="14.0" layoutY="65.0" prefHeight="10.0" prefWidth="1077.0" />
+   </children>
+   <padding>
+      <Insets top="225.0" />
+   </padding>
+</AnchorPane>

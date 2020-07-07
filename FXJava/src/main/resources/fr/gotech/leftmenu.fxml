@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="leftMenu" prefHeight="850.0" prefWidth="300.0" stylesheets="@css/stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.gotech.LeftMenuController">
+   <children>
+      <ImageView fitHeight="155.0" fitWidth="280.0" layoutX="15.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="659.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.88970947265625" AnchorPane.topAnchor="36.0">
+         <image>
+            <Image url="@css/images/logo_go_tech.png" />
+         </image>
+      </ImageView>
+      <VBox layoutY="561.0" prefHeight="269.0" prefWidth="300.0" spacing="10.0" AnchorPane.topAnchor="561.0">
+         <children>
+            <JFXButton graphicTextGap="1.0" onAction="#actionAddClient" prefHeight="64.0" prefWidth="300.0" style="-fx-background-color: #379EC1;" styleClass="JFXButton" text="Ajouter un client">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton id="JFXButton" graphicTextGap="1.0" onAction="#actionAddEquipement" prefHeight="64.0" prefWidth="313.0" style="-fx-background-color: #379EC1;" styleClass="JFXButton" text="Ajouter un équipement">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </JFXButton>
+            <JFXButton id="JFXButton" graphicTextGap="1.0" onAction="#actionClientView" prefHeight="64.0" prefWidth="310.0" style="-fx-background-color: #379EC1;" styleClass="JFXButton" text="Lister les clients">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton id="JFXButton" graphicTextGap="1.0" onAction="#actionEquipementView" prefHeight="64.0" prefWidth="310.0" style="-fx-background-color: #379EC1;" styleClass="JFXButton" text="Lister les équipements" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="507.0" prefWidth="769.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.gotech.InterfaceEditController">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="369.0" prefWidth="352.0" spacing="10.0" AnchorPane.bottomAnchor="118.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label styleClass="formFont" text="Informations de l'interface">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <GridPane prefHeight="272.0" prefWidth="295.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="131.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="10.0" prefWidth="229.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label styleClass="formFont" text="Type :" />
+                  <Label styleClass="formFont" text="Nom :" GridPane.rowIndex="1" />
+                  <Label styleClass="formFont" text="Adressage :" GridPane.rowIndex="2" />
+                  <Label styleClass="formFont" text="IP :" GridPane.rowIndex="3" />
+                  <Label styleClass="formFont" text="Masque : " GridPane.rowIndex="4" />
+                  <Label styleClass="formFont" text="Gateway : " GridPane.rowIndex="5" />
+                  <Label styleClass="formFont" text="DNS 1:" GridPane.rowIndex="6" />
+                  <Label styleClass="formFont" text="DNS 2 :" GridPane.rowIndex="7" />
+                  <ComboBox fx:id="idTypeNetwork" prefHeight="26.0" prefWidth="230.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="idNomInterface" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <ComboBox fx:id="idTypeAdr" prefHeight="26.0" prefWidth="235.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="idIP" promptText="Adresse IP" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="idCIDR" promptText="Masque de sous réseau" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="idGW" promptText="Passerelle" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="idDNS1" promptText="DNS 1" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="idDNS2" promptText="DNS 2" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <JFXListView fx:id="listView" layoutX="46.0" layoutY="150.0" prefHeight="193.0" prefWidth="209.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="514.0" AnchorPane.topAnchor="150.0" />
+      <Label layoutX="30.0" layoutY="34.0" styleClass="formFont" text="Liste de la ou les interfaces">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Separator layoutX="44.0" layoutY="62.0" prefWidth="200.0" />
+      <Label layoutX="28.0" layoutY="86.0" text="Pour l'équipement :" />
+      <Label layoutX="28.0" layoutY="121.0" text="Pour le client : " />
+      <Label fx:id="labelEquipement" layoutX="178.0" layoutY="86.0" prefHeight="16.0" prefWidth="145.0" />
+      <Label fx:id="labelClient" layoutX="180.0" layoutY="121.0" prefHeight="16.0" prefWidth="145.0" />
+      <HBox alignment="TOP_CENTER" layoutX="263.0" layoutY="389.0" prefHeight="85.0" prefWidth="445.0">
+         <children>
+            <JFXButton onAction="#actionModifier" prefHeight="50.0" prefWidth="120.0" styleClass="JFXButton" text="Modifier">
+               <HBox.margin>
+                  <Insets left="45.0" right="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton onAction="#actionAnnuler" prefHeight="50.0" prefWidth="120.0" styleClass="JFXButton" text="Annuler">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton onAction="#actionSupprimer" prefHeight="50.0" prefWidth="120.0" styleClass="JFXButton" text="Supprimer">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.gotech.EquipementViewController">
+   <children>
+      <SplitPane dividerPositions="0.6530758226037195" layoutY="325.0" prefHeight="616.0" prefWidth="1213.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TabPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab id="fontRoboto" closable="false" styleClass="classTab" text="Tous">
+                           <content>
+                              <AnchorPane>
+                                 <children>
+                                    <JFXTreeTableView fx:id="tableauEquipement" prefHeight="770.0" prefWidth="1410.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <contextMenu>
+                                          <ContextMenu>
+                                            <items>
+                                              <MenuItem mnemonicParsing="false" onAction="#modifierInterface" text="Modifier Configuration Réseau" />
+                                            </items>
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" onAction="#ajouerInterface" text="Ajouter une interface réseau" />
+                                             </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </JFXTreeTableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab id="fontRoboto" closable="false" styleClass="classTab" text="Routeur">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTreeTableView fx:id="tableauRouteur" prefHeight="582.0" prefWidth="775.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab id="fontRoboto" closable="false" styleClass="classTab" text="Switch">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTreeTableView fx:id="tableauSwitch" prefHeight="582.0" prefWidth="775.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab id="fontRoboto" closable="false" styleClass="classTab" text="Serveur">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTreeTableView fx:id="tableauServeur" prefHeight="582.0" prefWidth="775.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab id="fontRoboto" closable="false" styleClass="classTab" text="Imprimante">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTreeTableView fx:id="tableauImprimante" prefHeight="582.0" prefWidth="775.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab id="fontRoboto" closable="false" styleClass="classTab" text="NAS">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTreeTableView fx:id="tableauNAS" prefHeight="582.0" prefWidth="775.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TabPane fx:id="tabPane" prefHeight="623.0" prefWidth="380.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab fx:id="defaultTab" styleClass="classTab" text="Informations">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="563.0">
+                                 <children>
+                                    <VBox prefHeight="723.0" prefWidth="471.0" spacing="10.0" AnchorPane.bottomAnchor="-133.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label id="titreEquipement" text="Informations sur l'équipement">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Separator prefWidth="200.0" />
+                                          <GridPane prefHeight="421.0" prefWidth="340.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="184.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="176.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label styleClass="labelEquipement" text="Client :">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label styleClass="labelEquipement" text="Type :" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label styleClass="labelEquipement" text="Marque :" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label styleClass="labelEquipement" text="Modèle :" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label styleClass="labelEquipement" text="Nom :" GridPane.rowIndex="4">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label styleClass="labelEquipement" text="SN :" GridPane.rowIndex="5">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label styleClass="labelEquipement" text="Achat :" GridPane.rowIndex="6">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label styleClass="labelEquipement" text="Fin de garantie :" GridPane.rowIndex="7">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label styleClass="labelEquipement" text="Installation :" GridPane.rowIndex="8">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label styleClass="labelEquipement" text="Etat :" GridPane.rowIndex="9">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label styleClass="labelEquipement" text="URL Admin :" GridPane.rowIndex="10">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="clientLabel" styleClass="labelEquipement" text="Label" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="typeLabel" styleClass="labelEquipement" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="marqueLabel" styleClass="labelEquipement" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="modeleLabel" styleClass="labelEquipement" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="nomLabel" styleClass="labelEquipement" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="snLabel" styleClass="labelEquipement" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="achatLabel" styleClass="labelEquipement" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="garantieLabel" styleClass="labelEquipement" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="installationLabel" styleClass="labelEquipement" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="etatLabel" styleClass="labelEquipement" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="urlLabel" styleClass="labelEquipement" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="25.0" />
+                                             </VBox.margin>
+                                          </GridPane>
+                                          <HBox prefHeight="68.0" prefWidth="469.0">
+                                             <children>
+                                                <JFXButton onAction="#actionEditer" prefHeight="50.0" prefWidth="135.0" styleClass="JFXButton" text="Modifier">
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                                <JFXButton onAction="#actionSupprimer" prefHeight="50.0" prefWidth="135.0" styleClass="JFXButton" text="Supprimer">
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                                <JFXButton onAction="#actionRecharger" prefHeight="50.0" prefWidth="135.0" styleClass="JFXButton" text="Recharger">
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </SplitPane>
+      <JFXTextField id="fontRoboto" fx:id="idInputText" focusColor="#379ec1" labelFloat="true" layoutX="336.0" layoutY="175.0" prefHeight="26.0" prefWidth="228.0" promptText="Effectuez une recherche :">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXComboBox id="fontRoboto" fx:id="idComboboxClient" focusColor="#379ec1" layoutX="28.0" layoutY="176.0" onAction="#actionCombobox" prefHeight="26.0" prefWidth="244.0" promptText="Sélectionnez un client" />
+      <Label id="fontRoboto" layoutX="25.0" layoutY="139.0" text="Equipement du client : ">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="idLabel" layoutX="25.0" layoutY="36.0" prefHeight="21.0" prefWidth="365.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="606.0" layoutY="178.0" onAction="#actionQRCode" styleClass="JFXButton" text="QRCode" />
+      <JFXButton layoutX="755.0" layoutY="178.0" onAction="#actionPDF" styleClass="JFXButton" text="PDF" />
+   </children>
+   <padding>
+      <Insets top="225.0" />
+   </padding>
+</AnchorPane>
